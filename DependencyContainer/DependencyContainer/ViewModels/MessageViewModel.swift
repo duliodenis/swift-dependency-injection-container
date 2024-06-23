@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+class MessageViewModel: ObservableObject {
+    @Published var message: String = ""
+    
+    init(messageProvider: MessageProvider) {
+        self.message = messageProvider.message
+    }
+}

@@ -8,10 +8,18 @@
 import SwiftUI
 
 @main
-struct DependencyContainerApp: App {
+struct DependencyInjectionApp: App {
+    let container = SimpleDependencyContainer()
+    
+    init() {
+        container.setupDependencies()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(container.resolve(type: MessageViewModel.self)!)
+                .environmentObject(container.resolve(type: CounterViewModel.self)!)
         }
     }
 }
