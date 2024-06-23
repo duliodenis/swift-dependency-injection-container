@@ -63,6 +63,8 @@ final class SimpleDependencyContainer: DependencyContainer {
 
 ### Sample SwiftUI App
 
+![](./art/screenshot-00.png)
+
 The sample SwiftUI app demonstrates how to use the `SimpleDependencyContainer` to inject dependencies into SwiftUI views.
 
 #### Dependencies
